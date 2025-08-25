@@ -1,0 +1,22 @@
+CREATE DATABASE ORG123;
+SHOW DATABASES;
+USE ORG123;
+
+CREATE TABLE Worker (
+	WORKER_ID INT  PRIMARY KEY,
+	FIRST_NAME CHAR(25),
+	LAST_NAME CHAR(25),
+	SALARY INT(15),
+	JOINING_DATE DATETIME,
+	DEPARTMENT CHAR(25)
+);
+SHOW TABLES;
+delete from Worker where Worker_id=71;
+select * from Worker;
+start transaction;
+savepoint A;
+update Worker set last_name='Vanavi' where worker_id=4;
+savepoint B;
+rollback to A;
+commit;
+-----------------------------------------------------------
