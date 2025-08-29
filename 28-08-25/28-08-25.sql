@@ -50,7 +50,7 @@ select department , count(department) as TotalMembers
  order by salary desc
  limit 2 offset 4 
  ;
- 
+ #-------------------------------------------------------- HAVE -----------------------------------------------------------------
 #Q1. Find departments with average salary > 100000.
 select department, avg(salary) as AverageSalaries
  from worker 
